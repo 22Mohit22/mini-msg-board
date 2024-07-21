@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>New message</title>
+</head>
+<body>
+    <div class="phone">
+        <form action="/new" method="post" class="form-container">
+            <input type="text" name="senderName" class="form-sender-name" placeholder="name" required>
+            <textarea type="text" name="senderMsg" class="form-sender-msg" placeholder="Hello there" required></textarea>
+            <div class="form-btns">
+                <a class="form-back" href="/">Back</a>
+                <button type="submit" class="form-send-btn">
+                    <span>Send</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" fill="#000000"/>
+                      </svg>                  
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

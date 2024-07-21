@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Mini message board</title>
+</head>
+<body>
+    <div class="phone">
+        <div class="msgs-container">
+            <% messages.forEach(message => { %>
+                <div class="msg-box">
+                    <div class="name-msg">
+                        <p class="user-name"><b><%= message.user %></b></p>
+                        <p class="user-message"><%= message.text %></p>
+                    </div>
+                    <span class="date-container"><p class="date-added"><%= message.added %></p></span>
+                </div>
+            <% }) %>
+        </div>
+        <form action="/new" method="post" class="send-msg-container">
+            <input type="text" name="senderName" class="sender-name" placeholder="name" required>
+            <input type="text" name="senderMsg" class="sender-msg" placeholder="Hello there" required>
+            <button type="submit" class="send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" fill="#000000"/>
+                  </svg>                  
+            </button>
+        </form>
+    </div>
+</body>
+</html>
